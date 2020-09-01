@@ -29,11 +29,11 @@ rm siim-isic-melanoma-classification.zip
 
 for input_size in 256 384 512 768
 do
-  # 2020 TF records
+  # 2020 TFRecords
   kaggle datasets download -d cdeotte/melanoma-${input_size}x${input_size}
   unzip -q melanoma-${input_size}x${input_size}.zip -d melanoma-${input_size}x${input_size}
   rm melanoma-${input_size}x${input_size}.zip
-  # 2017-2018-2019 TF records
+  # 2017-2018-2019 TFRecords
   kaggle datasets download -d cdeotte/isic2019-${input_size}x${input_size}
   unzip -q isic2019-${input_size}x${input_size}.zip -d isic2019-${input_size}x${input_size}
   rm isic2019-${input_size}x${input_size}.zip
