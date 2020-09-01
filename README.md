@@ -22,16 +22,21 @@ pip install -r requirements.txt
 mkdir ./data
 cd ./data
 
+# Competition data
 kaggle competitions download -c siim-isic-melanoma-classification
 unzip siim-isic-melanoma-classification.zip
+rm siim-isic-melanoma-classification.zip
 
 for input_size in 256 384 512 768
 do
+  # 2020 TF records
   kaggle datasets download -d cdeotte/melanoma-${input_size}x${input_size}
-  kaggle datasets download -d cdeotte/isic2019-${input_size}x${input_size}
   unzip -q melanoma-${input_size}x${input_size}.zip -d melanoma-${input_size}x${input_size}
+  rm melanoma-${input_size}x${input_size}.zip
+  # 2017-2018-2019 TF records
+  kaggle datasets download -d cdeotte/isic2019-${input_size}x${input_size}
   unzip -q isic2019-${input_size}x${input_size}.zip -d isic2019-${input_size}x${input_size}
-  rm melanoma-${input_size}x${input_size}.zip isic2019-${input_size}x${input_size}.zip
+  rm isic2019-${input_size}x${input_size}.zip
 done
 ```
 
