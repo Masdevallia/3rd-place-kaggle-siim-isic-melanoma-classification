@@ -4,7 +4,7 @@
 
 Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard
 
-### Software ()
+### Software
 
 * Python 3.7.6
 * Kaggle's TPU v3-8 (8 cores)
@@ -12,7 +12,26 @@ Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classificat
 
 ### Setup Python environment
 
-```python
+```
 pip install -r requirements.txt
+```
+
+### Download data
+
+```
+mkdir ./data
+cd ./data
+
+kaggle competitions download -c siim-isic-melanoma-classification
+unzip siim-isic-melanoma-classification.zip
+
+for input_size in 256 384 512 768
+do
+  kaggle datasets download -d cdeotte/melanoma-${input_size}x${input_size}
+  kaggle datasets download -d cdeotte/isic2019-${input_size}x${input_size}
+  unzip -q melanoma-${input_size}x${input_size}.zip -d melanoma-${input_size}x${input_size}
+  unzip -q isic2019-${input_size}x${input_size}.zip -d isic2019-${input_size}x${input_size}
+  rm melanoma-${input_size}x${input_size}.zip isic2019-${input_size}x${input_size}.zip
+done
 ```
 
