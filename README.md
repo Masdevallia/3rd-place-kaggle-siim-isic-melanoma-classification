@@ -1,6 +1,4 @@
-# Kaggle SIIM-ISIC Melanoma Classification
-
-## 3rd place solution overview
+## Kaggle SIIM-ISIC Melanoma Classification: 3rd place solution overview
 
 Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard
 
@@ -24,19 +22,19 @@ Assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed.
 mkdir ./data
 cd ./data
 ```
-#### Competition data:
+##### Competition data:
 ```
 kaggle competitions download -c siim-isic-melanoma-classification
 unzip siim-isic-melanoma-classification.zip
 rm siim-isic-melanoma-classification.zip
 ```
-#### Images of hairs for hair augmentation:
+##### Images of hairs for hair augmentation:
 ```
 kaggle datasets download -d nroman/melanoma-hairs
 unzip -q melanoma-hairs.zip -d melanoma-hairs
 rm melanoma-hairs.zip
 ```
-#### TFRecords:
+##### TFRecords:
 ```
 for input_size in 256 384 512 768
 do
