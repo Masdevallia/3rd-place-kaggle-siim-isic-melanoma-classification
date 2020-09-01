@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ### Download data
 
-Assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed.
+Assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is properly installed.
 
 ```
 mkdir ./data
