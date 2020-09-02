@@ -76,7 +76,7 @@ The script `ensembling.py` ensembles the image-models submission files located i
 Usage:
 
 ```
-ensembling.py [-h] [--image_data_path PATH] [--metadata_path PATH] [--metadata_weight WEIGHT] [--ensemble_path PATH] [--ensemble_filename FILENAME]
+python ensembling.py [-h] [--image_data_path PATH] [--metadata_path PATH] [--metadata_weight WEIGHT] [--ensemble_path PATH] [--ensemble_filename FILENAME]
 ```
 
 |         Argument           |         Function                           |     Default   |
