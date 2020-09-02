@@ -18,7 +18,7 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 #### Training
 
-The source code for model training is published in this [Kaggle notebook]().
+The source code for model training is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia).
 
 We trained 8 image models, as shown below:
 
@@ -51,7 +51,7 @@ Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melan
 
 #### Predicting
 
-The source code for making predictions is published in this [Kaggle notebook]().
+The source code for making predictions is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia).
 
 Again, to reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
 
