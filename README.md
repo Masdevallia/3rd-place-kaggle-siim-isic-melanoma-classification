@@ -25,13 +25,13 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 | 7           | 2019-2020   | 512x512       | 12                | X                 |
 | 8           | 2019-2020   | 768x768       | 10                |                   |
 
+Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
+
 #### Metadata
 
 https://www.kaggle.com/titericz/simple-baseline
 
 ### Predicting
-
-
 
 ### Ensembling
 
