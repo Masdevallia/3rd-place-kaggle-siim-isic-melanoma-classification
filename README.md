@@ -44,44 +44,4 @@ https://www.kaggle.com/titericz/simple-baseline
 
 ### Ensembling
 
----
-
-### Appendix
-
-#### How to download competition data locally
-
-Assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is properly installed.
-
-```
-mkdir ./data
-cd ./data
-```
-##### Competition data
-```
-kaggle competitions download -c siim-isic-melanoma-classification
-unzip siim-isic-melanoma-classification.zip
-rm siim-isic-melanoma-classification.zip
-```
-##### Images of hairs for hair augmentation
-```
-kaggle datasets download -d nroman/melanoma-hairs
-unzip -q melanoma-hairs.zip -d melanoma-hairs
-rm melanoma-hairs.zip
-```
-*Thanks to @nroman.*
-##### TFRecords
-```
-for input_size in 256 384 512 768
-do
-  # 2020 TFRecords:
-  kaggle datasets download -d cdeotte/melanoma-${input_size}x${input_size}
-  unzip -q melanoma-${input_size}x${input_size}.zip -d melanoma-${input_size}x${input_size}
-  rm melanoma-${input_size}x${input_size}.zip
-  # 2017-2018-2019 TFRecords:
-  kaggle datasets download -d cdeotte/isic2019-${input_size}x${input_size}
-  unzip -q isic2019-${input_size}x${input_size}.zip -d isic2019-${input_size}x${input_size}
-  rm isic2019-${input_size}x${input_size}.zip
-done
-```
-*Thanks to @cdeotte.*
 
