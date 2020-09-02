@@ -10,9 +10,9 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 * Kaggle's TPU v3-8 (8 cores)
 * Python packages are detailed separately in `requirements.txt`
 
-### Training
+### Image models:
 
-#### Image models:
+#### Training
 
 | Model       | Data        | Image size    | Epochs            | Hair augmentation |
 | :----:      |    :----:   |      :----:   |      :----:       |      :----:       |
@@ -27,11 +27,11 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
 
-#### Metadata
+#### Predicting
 
+### Metadata: Training & Predicting
+*Thanks to @titericz.*
 https://www.kaggle.com/titericz/simple-baseline
-
-### Predicting
 
 ### Ensembling
 
@@ -52,12 +52,14 @@ unzip siim-isic-melanoma-classification.zip
 rm siim-isic-melanoma-classification.zip
 ```
 ##### Images of hairs for hair augmentation
+*Thanks to @nroman.*
 ```
 kaggle datasets download -d nroman/melanoma-hairs
 unzip -q melanoma-hairs.zip -d melanoma-hairs
 rm melanoma-hairs.zip
 ```
 ##### TFRecords
+*Thanks to @cdeotte.*
 ```
 for input_size in 256 384 512 768
 do
