@@ -2,6 +2,8 @@
 
 Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard
 
+---
+
 ### Software
 
 Model training and predictions were performed in Kaggle TPU Kernels.
@@ -9,6 +11,8 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 * Python 3.7.6
 * Kaggle's TPU v3-8 (8 cores)
 * Python packages are detailed separately in `requirements.txt`
+
+---
 
 ### Image models:
 
@@ -29,12 +33,18 @@ Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-
 
 #### Predicting
 
+---
+
 ### Metadata: Training & Predicting
 https://www.kaggle.com/titericz/simple-baseline
 
 *Thanks to @titericz.*
 
+---
+
 ### Ensembling
+
+---
 
 ### Appendix
 
