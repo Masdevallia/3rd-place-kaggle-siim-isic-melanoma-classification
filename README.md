@@ -30,9 +30,9 @@ Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-
 #### Predicting
 
 ### Metadata: Training & Predicting
-<sub>*Thanks to @titericz.*</sub>
-
 https://www.kaggle.com/titericz/simple-baseline
+
+*Thanks to @titericz.*
 
 ### Ensembling
 
@@ -53,14 +53,13 @@ unzip siim-isic-melanoma-classification.zip
 rm siim-isic-melanoma-classification.zip
 ```
 ##### Images of hairs for hair augmentation
-*Thanks to @nroman.*
 ```
 kaggle datasets download -d nroman/melanoma-hairs
 unzip -q melanoma-hairs.zip -d melanoma-hairs
 rm melanoma-hairs.zip
 ```
+*Thanks to @nroman.*
 ##### TFRecords
-*Thanks to @cdeotte.*
 ```
 for input_size in 256 384 512 768
 do
@@ -74,4 +73,5 @@ do
   rm isic2019-${input_size}x${input_size}.zip
 done
 ```
+*Thanks to @cdeotte.*
 
