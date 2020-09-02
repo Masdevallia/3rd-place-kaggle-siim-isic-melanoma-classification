@@ -14,7 +14,7 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 ---
 
-### Image models:
+### Image models
 
 #### Training
 
@@ -35,7 +35,10 @@ Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-
 
 ---
 
-### Metadata: Training & Predicting
+### Metadata
+
+#### Training & Predicting
+
 https://www.kaggle.com/titericz/simple-baseline
 
 ---
