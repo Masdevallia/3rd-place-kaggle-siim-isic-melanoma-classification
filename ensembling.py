@@ -17,7 +17,7 @@ def get_settings():
     parser.add_argument('--ensemble_path', help='The desired destination path in which to save the ensemble file.',
         default='./ensemble', type = str)     
     parser.add_argument('--ensemble_filename', help='The desired name for the ensemble file.',
-        default='ensemble2', type = str)                    
+        default='ensemble', type = str)                    
     args = parser.parse_args()
     return args
 
