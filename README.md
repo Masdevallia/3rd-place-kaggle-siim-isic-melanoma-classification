@@ -18,6 +18,10 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 #### Training
 
+The source code for model training is published in this [Kaggle notebook]().
+
+We trained 8 image models, as shown below:
+
 | Model       | Data        | Image size    | Epochs            | Hair augmentation |
 | :----:      |    :----:   |      :----:   |      :----:       |      :----:       |
 | 1           | 2020        | 256x256       | 13                |                   |
@@ -29,9 +33,29 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 | 7           | 2019-2020   | 512x512       | 12                | X                 |
 | 8           | 2019-2020   | 768x768       | 10                |                   |
 
-Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
+To reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
+
+For example, for the model 1, the content of the input cell should be:
+```python
+tfrec_shape = 256
+comp_data = "2020"
+```
+
+For model 6, however, it should be:
+```python
+tfrec_shape = 384
+comp_data = "2019-2020"
+```
+
+Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
 
 #### Predicting
+
+The source code for making predictions is published in this [Kaggle notebook]().
+
+Again, to reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
+
+Our image-models submission files can be found in "./submissions/image_data/".
 
 ---
 
@@ -39,7 +63,9 @@ Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-
 
 #### Training & Predicting
 
-https://www.kaggle.com/titericz/simple-baseline
+For metadata, we used a simple baseline model proposed by [@titericz](https://www.kaggle.com/titericz), which can be found [here](https://www.kaggle.com/titericz/simple-baseline).
+
+Our metadata-model submission file can be found in "./submissions/metadata/".
 
 ---
 
