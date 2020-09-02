@@ -30,7 +30,8 @@ Trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-
 #### Predicting
 
 ### Metadata: Training & Predicting
-*Thanks to @titericz.*
+<sub>*Thanks to @titericz.*</sub>
+
 https://www.kaggle.com/titericz/simple-baseline
 
 ### Ensembling
