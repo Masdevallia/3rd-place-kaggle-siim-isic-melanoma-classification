@@ -1,6 +1,7 @@
 ## Kaggle SIIM-ISIC Melanoma Classification: 3rd place solution overview
 
 Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard
+
 Solution overview: https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175633
 
 ---
@@ -76,7 +77,7 @@ Our metadata-model submission file can be found in `"./submissions/metadata"`.
 
 The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data"` whit a single metadata-model submission file located in `"./submissions/metadata"`. The script allows you to choose whether to include external data (e.g. from other public notebooks) or not. External image-models submissions must be located in `"./submissions/external_image_data"`. The resulting ensemble file is saved in the destination path: `"./ensemble"`.
 
-Usage:
+#### Usage:
 
 ```
 python ensembling.py [-h] [--include_external EXTERNAL] [--metadata_weight WEIGHT] [--ensemble_filename FILENAME]
@@ -86,8 +87,10 @@ python ensembling.py [-h] [--include_external EXTERNAL] [--metadata_weight WEIGH
 |           :----:               |         :----:                              |      :----:   |
 |        -h, --help              |      Shows help message and exits           |               |
 | --include_external EXTERNAL    | Whether to include external data (1) or not (0) |     0     |
-|     --metadata_weight WEIGHT   |        Weight assigned to metadata          |    0.2        |
+|     --metadata_weight WEIGHT   |      Weight assigned to metadata (0-1)      |    0.2        |
 |   --ensemble_filename FILENAME |   The desired name for the ensemble file    |    'ensemble' |
+
+#### Our solutions:
 
 Our winning solution, which scored 0.9484 private LB, 0.9620 public LB, was obtained by the following parameterization:
 
