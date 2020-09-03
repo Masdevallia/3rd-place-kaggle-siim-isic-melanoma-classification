@@ -1,6 +1,7 @@
 ## Kaggle SIIM-ISIC Melanoma Classification: 3rd place solution overview
 
 Competition Leaderboard: https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard
+Solution overview: https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175633
 
 ---
 
@@ -73,21 +74,33 @@ Our metadata-model submission file can be found in `"./submissions/metadata"`.
 
 ### Ensembling
 
-The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data"` whit the metadata-model submission file located in `"./submissions/metadata"`.
+The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data"` whit a single metadata-model submission file located in `"./submissions/metadata"`. The script allows you to choose whether to include external data (e.g. from other public notebooks) or not. External image-models submissions must be located in `"./submissions/external_image_data"`. The resulting ensemble file is saved in the destination path: `"./ensemble"`.
 
 Usage:
 
 ```
-python ensembling.py [-h] [--image_data_path PATH] [--metadata_path PATH] [--metadata_weight WEIGHT] [--ensemble_path PATH] [--ensemble_filename FILENAME]
+python ensembling.py [-h] [--include_external EXTERNAL] [--metadata_weight WEIGHT] [--ensemble_filename FILENAME]
 ```
 
-|         Argument           |         Function                           |     Default   |
-|           :----:           |         :----:                             |      :----:   |
-|        -h, --help          |      Shows help message and exits          |               |
-| --image_data_path PATH    |      Path to image-models submission files | './submissions/image_data' |
-| --metadata_path PATH     | Path to the metadata-model submission file | './submissions/metadata' |
-| --metadata_weight WEIGHT   |        Weight assigned to metadata         |    0.2        |
-| --ensemble_path PATH     | The desired destination path in which to save the ensemble file | './ensemble' |
-| --ensemble_filename FILENAME |   The desired name for the ensemble file   |    'ensemble' |
+|         Argument               |         Function                            |     Default   |
+|           :----:               |         :----:                              |      :----:   |
+|        -h, --help              |      Shows help message and exits           |               |
+| --include_external EXTERNAL    | Whether to include external data (1) or not (0) |     0     |
+|     --metadata_weight WEIGHT   |        Weight assigned to metadata          |    0.2        |
+|   --ensemble_filename FILENAME |   The desired name for the ensemble file    |    'ensemble' |
 
-Our ensemble file can be found in `"./ensemble"`.
+Our winning solution, which scored 0.9484 private LB, 0.9620 public LB, was obtained by the following parameterization:
+
+```
+python ensembling.py --include_external 1 --metadata_weight 0.3 --ensemble_filename 'ensemble_external'
+```
+
+In this solution, we decided to ensemble two public notebooks to our image-models, in order to add some diversity ([this one](https://www.kaggle.com/rajnishe/rc-fork-siim-isic-melanoma-384x384) from [@rajnishe](https://www.kaggle.com/rajnishe) and [this one](https://www.kaggle.com/ajaykumar7778/efficientnet-cv) from [@ajaykumar7778](https://www.kaggle.com/ajaykumar7778)). The corresponding ensemble file can be found in `"./ensemble/ensemble_external.csv"`.
+
+However, a higher score can be obtained without using external data, with the following parameterization:
+
+```
+python ensembling.py --include_external 0 --metadata_weight 0.2 --ensemble_filename 'ensemble'
+```
+
+The last ensemble scored 0.9489 private LB, 0.9592 public LB, but was not selected as a final submission for judging. It can be found in `"./ensemble/ensemble.csv"`.
