@@ -55,7 +55,7 @@ Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melan
 
 #### Predicting
 
-The source code for making predictions is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia).
+The source code for making predictions is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-predictions).
 
 Again, to reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
 
