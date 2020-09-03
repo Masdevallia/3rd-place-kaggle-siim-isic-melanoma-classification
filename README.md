@@ -35,7 +35,7 @@ We trained 8 image models, as shown below:
 
 To reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
 
-For example, for the model 1, the content of the input cell should be:
+For example, for model 1, the content of the input cell should be:
 ```python
 tfrec_shape = 256
 comp_data = "2020"
@@ -47,6 +47,8 @@ tfrec_shape = 384
 comp_data = "2019-2020"
 ```
 
+Training time for a single model ranges from 0.5 to 3 hours (all models can be fitted within Kaggle's TPU limit).
+
 Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
 
 #### Predicting
@@ -55,7 +57,7 @@ The source code for making predictions is published in this [Kaggle notebook](ht
 
 Again, to reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
 
-Our image-models submission files can be found in `"./submissions/image_data/"`.
+Our image-models submission files can be found in `"./submissions/image_data"`.
 
 ---
 
@@ -65,13 +67,13 @@ Our image-models submission files can be found in `"./submissions/image_data/"`.
 
 For metadata, we used a simple baseline model proposed by [@titericz](https://www.kaggle.com/titericz), which can be found [here](https://www.kaggle.com/titericz/simple-baseline).
 
-Our metadata-model submission file can be found in `"./submissions/metadata/"`.
+Our metadata-model submission file can be found in `"./submissions/metadata"`.
 
 ---
 
 ### Ensembling
 
-The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data/"` whit the metadata-model submission file located in `"./submissions/metadata/"`.
+The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data"` whit the metadata-model submission file located in `"./submissions/metadata"`.
 
 Usage:
 
@@ -87,3 +89,5 @@ python ensembling.py [-h] [--image_data_path PATH] [--metadata_path PATH] [--met
 | --metadata_weight WEIGHT   |        Weight assigned to metadata         |    0.2        |
 | --ensemble_path PATH     | The desired destination path in which to save the ensemble file | './ensemble' |
 | --ensemble_filename FILENAME |   The desired name for the ensemble file   |    'ensemble' |
+
+Our ensemble file can be found in `"./ensemble"`.
