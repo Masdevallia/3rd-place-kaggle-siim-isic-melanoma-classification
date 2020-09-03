@@ -47,7 +47,7 @@ tfrec_shape = 384
 comp_data = "2019-2020"
 ```
 
-Training time for a single model ranges from 0.5 to 3 hours (all models can be fitted within Kaggle's TPU limit).
+Training time for a single model ranges from ~ 0.5 to ~ 3 hours (all models can be fitted within 3 hours Kaggle's TPU limit for a single session).
 
 Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melanoma-classification-3rd-place-models).
 
