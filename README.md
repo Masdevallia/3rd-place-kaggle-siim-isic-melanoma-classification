@@ -20,7 +20,7 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 #### Training
 
-The source code for model training is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia).
+The source code for model training is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-model-training).
 
 We trained 8 image models, as shown below:
 
