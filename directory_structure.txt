@@ -1,0 +1,7 @@
+.
+./ensemble
+./kaggle_notebooks
+./submissions
+./submissions/external_image_data
+./submissions/image_data
+./submissions/metadata
