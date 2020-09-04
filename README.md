@@ -6,13 +6,27 @@ Solution overview: https://www.kaggle.com/c/siim-isic-melanoma-classification/di
 
 ---
 
-### Software
+### Hardware/Software
 
 Model training and predictions were performed in Kaggle TPU Kernels.
 
-* Python 3.7.6
+* Python 3.7.6 (Python packages are detailed separately in `requirements.txt`)
 * Kaggle's TPU v3-8 (8 cores)
-* Python packages are detailed separately in `requirements.txt`
+
+---
+
+### Data
+
+* [SIIM-ISIC Melanoma Classification](https://www.kaggle.com/c/siim-isic-melanoma-classification/data)
+* [ISIC 2019 TFRecords 256x256](https://www.kaggle.com/cdeotte/isic2019-256x256)
+* [ISIC 2019 TFRecords 384x384](https://www.kaggle.com/cdeotte/isic2019-384x384)
+* [ISIC 2019 TFRecords 512x512](https://www.kaggle.com/cdeotte/isic2019-512x512)
+* [ISIC 2019 TFRecords 768x768](https://www.kaggle.com/cdeotte/isic2019-768x768)
+* [Melanoma TFRecords 256x256](https://www.kaggle.com/cdeotte/melanoma-256x256)
+* [Melanoma TFRecords 384x384](https://www.kaggle.com/cdeotte/melanoma-384x384)
+* [Melanoma TFRecords 512x512](https://www.kaggle.com/cdeotte/melanoma-512x512)
+* [Melanoma TFRecords 768x768](https://www.kaggle.com/cdeotte/melanoma-768x768)
+* [melanoma_hairs](https://www.kaggle.com/nroman/melanoma-hairs)
 
 ---
 
@@ -20,7 +34,7 @@ Model training and predictions were performed in Kaggle TPU Kernels.
 
 #### Training
 
-The source code for model training is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-model-training).
+The source code for model training is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-model-training). It can also be found in `"./kaggle_notebooks"`.
 
 We trained 8 image models, as shown below:
 
@@ -55,7 +69,7 @@ Our trained weights can be found [here](https://www.kaggle.com/masdevallia/melan
 
 #### Predicting
 
-The source code for making predictions is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-predictions).
+The source code for making predictions is published in this [Kaggle notebook](https://www.kaggle.com/masdevallia/melanoma-classification-predictions). It can also be found in `"./kaggle_notebooks"`.
 
 Again, to reproduce our results, the Kaggle notebook must be forked and executed 8 times, one for each model, changing only the content of the first cell (input) each time.
 
@@ -78,6 +92,8 @@ Our metadata-model submission file can be found in `"./submissions/metadata"`.
 The script `ensembling.py` ensembles the image-models submission files located in `"./submissions/image_data"` whit a single metadata-model submission file located in `"./submissions/metadata"`. The script allows you to choose whether to include external data (e.g. from other public notebooks) or not. External image-models submissions must be located in `"./submissions/external_image_data"`. The resulting ensemble file is saved in the destination path: `"./ensemble"`.
 
 #### Usage:
+
+Shell commands, as run from the top level directory:
 
 ```
 python ensembling.py [-h] [--include_external EXTERNAL] [--metadata_weight WEIGHT] [--ensemble_filename FILENAME]
