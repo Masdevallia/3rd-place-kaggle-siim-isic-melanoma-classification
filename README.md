@@ -6,7 +6,7 @@ Solution overview: https://www.kaggle.com/c/siim-isic-melanoma-classification/di
 
 ---
 
-### Hardware/Software
+### Hardware / Software
 
 Model training and predictions were performed in Kaggle TPU Kernels.
 
